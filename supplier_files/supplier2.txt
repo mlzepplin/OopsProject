@@ -1,0 +1,6 @@
+concrete 180
+steel 400
+glass 490
+wood 390
+bricks 120
+

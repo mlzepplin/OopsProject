@@ -1,0 +1,65 @@
+class vehicle{
+	char type[20];
+	char handles[20];//to be added via main, what type of materials this vehicle type handles
+	int rent;
+	int capacity;
+	public:
+	vehicle(){
+		*Type=NULL;
+		*handles=NULL;
+		rent=0;
+		capacity=0;
+	}
+	vehicle(char*t,char* h,int r,int c){
+		strcpy(type,t);
+		strcoy(handles,h);
+		rent=r;
+		capacity=c;
+	}
+
+		
+	int rentcal(int q){
+		return q*rent;
+	}
+	int quantitycal(int req){
+		float extra=0.0;
+		int temp;
+		temp=(req/capacity);
+		if((extra=req%capacity))
+			temp++;
+		return temp;
+	}
+};
+
+class transportcompany{
+	vehicle *v;
+	int totalcost;
+	public:
+	transportcompany(){
+		vehicle=NULL;
+	}
+	transportcompany(vehicle* v){
+		this->v=v;
+	}
+	int costcal(material* tender_mat_list){
+		int i,j,k;
+		for(i=0;i<length(tender_mat_list);i++)
+		{
+			int flag=0;
+			for(j=0;j<length(v);j++)
+			{
+				
+				
+				if(strcmp(*tender_mat_list[i].type,*v[j].handles){
+					int q;
+					q=quantitycal(*tender_mat_list[i].quantity);
+					totalcost+=*v[j].rentcal(q);
+				}		
+
+
+			}				
+		
+		}
+
+	}
+};

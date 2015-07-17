@@ -1,0 +1,5 @@
+normal_car bricks 1000 80
+special_car glass 1500 80
+mixer concrete 6000 100
+truck steel 3000 150
+truck wood 3000 150
